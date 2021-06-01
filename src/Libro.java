@@ -3,12 +3,27 @@ public class Libro {
 	private Integer codigo;
 	private String nombre;
 	private String autor;
+	private TiposDeLibro tipoDeLibro;
+	private Boolean estaDisponible;
 	
-	public Libro(Integer codigo, String nombre, String autor) {
+	public Libro(Integer codigo, String nombre, String autor, TiposDeLibro tipoDeLibro) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.autor = autor;
+		this.tipoDeLibro = tipoDeLibro;
+		this.estaDisponible = true;
 	}
+
+
+	public TiposDeLibro getTipoDeLibro() {
+		return tipoDeLibro;
+	}
+
+
+	public void setTipoDeLibro(TiposDeLibro tipoDeLibro) {
+		this.tipoDeLibro = tipoDeLibro;
+	}
+
 
 	public Integer getCodigo() {
 		return codigo;

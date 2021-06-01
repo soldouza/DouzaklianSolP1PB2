@@ -1,13 +1,16 @@
+import java.util.ArrayList;
 
 public class Estudiante {
 	private Integer dni;
 	private String apellido;
 	private String nombre;
+	private ArrayList<Libro> librosPrestados;
 	
 	public Estudiante(Integer dni, String apellido, String nombre) {
 		this.dni = dni;
 		this.apellido = apellido;
 		this.nombre = nombre;
+		this.librosPrestados = new ArrayList<Libro>();
 	}
 
 	public Integer getDni() {
@@ -34,7 +37,9 @@ public class Estudiante {
 		this.nombre = nombre;
 	}
 	
-	
+	private Integer prestarLibro(){
+		return librosPrestados.size();
+	}
 	
 
 }
