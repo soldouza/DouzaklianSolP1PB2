@@ -12,6 +12,17 @@ public class Estudiante {
 		this.nombre = nombre;
 		this.librosPrestados = new ArrayList<Libro>();
 	}
+	
+
+	public ArrayList<Libro> getLibrosPrestados() {
+		return librosPrestados;
+	}
+
+
+	public void setLibrosPrestados(ArrayList<Libro> librosPrestados) {
+		this.librosPrestados = librosPrestados;
+	}
+
 
 	public Integer getDni() {
 		return dni;
@@ -37,7 +48,7 @@ public class Estudiante {
 		this.nombre = nombre;
 	}
 	
-	private Integer prestarLibro(){
+	private Integer solicitarPrestamo(){
 		return librosPrestados.size();
 	}
 	

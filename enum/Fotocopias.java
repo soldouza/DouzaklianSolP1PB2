@@ -1,4 +1,4 @@
 
 public interface Fotocopias {
-	public void sePuedeFotocopiar();
+	public String sePuedeFotocopiar();
 }

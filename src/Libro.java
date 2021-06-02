@@ -6,14 +6,13 @@ public class Libro {
 	private TiposDeLibro tipoDeLibro;
 	private Boolean estaDisponible;
 	
-	public Libro(Integer codigo, String nombre, String autor, TiposDeLibro tipoDeLibro) {
+	public Libro(Integer codigo, String nombre, String autor, TiposDeLibro tipo) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.autor = autor;
-		this.tipoDeLibro = tipoDeLibro;
 		this.estaDisponible = true;
+		this.tipoDeLibro = tipo;
 	}
-
 
 	public TiposDeLibro getTipoDeLibro() {
 		return tipoDeLibro;
