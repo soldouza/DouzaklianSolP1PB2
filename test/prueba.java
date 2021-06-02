@@ -1,9 +1,28 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class prueba {
-	
+	@Test
+	public void queSePuedaCrearUnaBiblioteca() {
+		Biblioteca biblioteca = new Biblioteca();
+		
+		assertNotEquals(null, biblioteca);
+	}
+	@Test
+	public void queSePuedaCrearUnLibro() {
+		Libro unLibro = new Libro(1, "libro", "libro", TiposDeLibro.GEOGRAFIA);
+		
+		assertEquals("libro", unLibro.getNombre());
+	}
+	@Test
+	public void queSePuedaCrearUnEstudiante() {
+		Estudiante unEstudiante = new Estudiante(40730374, "solcito", "douza");
+		
+		assertEquals((Integer)40730374, unEstudiante.getDni());
+	}
 	@Test
 	public void queSePuedaPrestarUnLibroAUnEstudiante() {
 		Biblioteca unlam = new Biblioteca();
@@ -13,7 +32,7 @@ public class prueba {
 		unlam.agregarLibro(geografia1);
 		unlam.prestamoDeLibro(unEstudiante, "Geografia del mundo");
 		
-		assertEquals((Integer)1, unEstudiante.getLibrosPrestados());
+		assertEquals(1, unEstudiante.getLibrosPrestados().size());
     }
 
    @Test
@@ -26,6 +45,9 @@ public class prueba {
 
         uba.agregarLibro(matematicas1);
         uba.agregarLibro(historia1);
+        uba.prestamoDeLibro(otroEstudiante, "Historia del mundo");
+        
+        assertEquals((Integer)1, otroEstudiante.getLibrosPrestados());
     
    }
 

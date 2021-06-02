@@ -8,12 +8,13 @@ public class Biblioteca {
 		this.libros = new ArrayList<Libro>();
 	}
 	
-	Boolean agregarLibro(Libro nuevoLibro) {
+	public Boolean agregarLibro(Libro nuevoLibro) {
 		this.libros.add(nuevoLibro);
 		return true;
 	}
 	
-	Boolean prestamoDeLibro(Estudiante estudiante, String libro) {
+	
+	public Boolean prestamoDeLibro(Estudiante estudiante, String libro) {
 	
 		return true;
 	}
